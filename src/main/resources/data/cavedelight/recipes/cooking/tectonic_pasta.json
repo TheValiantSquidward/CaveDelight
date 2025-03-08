@@ -1,0 +1,32 @@
+{
+  "type": "farmersdelight:cooking",
+  "container": {
+    "item": "minecraft:bowl"
+  },
+  "cookingtime": 200,
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "item": "alexscaves:tectonic_shard"
+    },
+    {
+      "item": "farmersdelight:raw_pasta"
+    },
+    {
+      "item": "farmersdelight:tomato"
+    },
+    {
+      "item": "cavedelight:curious_insect"
+    },
+    {
+      "item": "cavedelight:curious_insect"
+    },
+    {
+      "item": "farmersdelight:onion"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "item": "cavedelight:tectonic_pasta"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "AAA",
+    "SFS"
+  ],
+  "key": {
+    "#": {
+      "item": "alexscaves:pewen_sap"
+    },
+    "A": {
+      "item": "alexscaves:pine_nuts"
+    },
+    "S": {
+      "item": "minecraft:sugar"
+    },
+    "F": {
+      "item": "farmersdelight:pie_crust"
+    }
+  },
+  "result": {
+    "item": "cavedelight:pinenut_pie",
+    "count": 1
+  }
+}

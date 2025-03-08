@@ -1,0 +1,6 @@
+{
+"parent": "minecraft:item/generated",
+"textures": {
+"layer0": "cavedelight:item/honey_glazed_dino_nugget_3"
+}
+}

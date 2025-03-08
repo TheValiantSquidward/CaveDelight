@@ -1,0 +1,23 @@
+{
+  "type": "farmersdelight:cooking",
+  "container": {
+    "item": "minecraft:bowl"
+  },
+  "cookingtime": 200,
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "item": "alexscaves:cooked_dinosaur_chop"
+    },
+    {
+      "item": "alexscaves:flytrap"
+    },
+    {
+      "item": "alexscaves:heavy_bone"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "item": "alexscaves:seething_stew"
+  }
+}

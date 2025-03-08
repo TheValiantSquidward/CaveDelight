@@ -1,0 +1,29 @@
+{
+  "type": "farmersdelight:cooking",
+  "container": {
+    "item": "minecraft:bowl"
+  },
+  "cookingtime": 200,
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "item": "alexscaves:trilocaris_tail"
+    },
+    {
+      "item": "cavedelight:raw_trilocaris_slice"
+    },
+    {
+      "item": "cavedelight:raw_trilocaris_slice"
+    },
+    {
+      "item": "farmersdelight:raw_pasta"
+    },
+    {
+      "item": "alexscaves:fiddlehead"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "item": "cavedelight:trilocaris_noodles"
+  }
+}

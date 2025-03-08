@@ -1,0 +1,17 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "cavedelight:tectonic_pie"
+    }
+  ],
+  "result": [
+    {
+      "count": 4,
+      "item": "cavedelight:tectonic_pie_slice"
+    }
+  ],
+  "tool": {
+    "tag": "forge:tools/knives"
+  }
+}

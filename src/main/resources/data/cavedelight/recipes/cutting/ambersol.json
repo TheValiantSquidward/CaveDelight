@@ -1,0 +1,22 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "alexscaves:ambersol"
+    }
+  ],
+  "result": [
+    {
+      "count": 1,
+      "item": "alexscaves:amber"
+    },
+    {
+      "count": 3,
+      "item": "minecraft:glowstone_dust"
+    }
+  ],
+  "tool": {
+    "type": "farmersdelight:tool_action",
+    "action": "pickaxe_dig"
+  }
+}

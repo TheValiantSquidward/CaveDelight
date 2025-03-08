@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "cavedelight:slice_of_tectonic_cheesecake"
+    }
+  },
+  "result": {
+    "item": "cavedelight:tectonic_cheesecake",
+    "count": 1
+  }
+}

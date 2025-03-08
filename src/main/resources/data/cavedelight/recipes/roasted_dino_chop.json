@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#A#",
+    "#B#"
+  ],
+  "key": {
+    "#": {
+      "item": "alexscaves:tree_star"
+    },
+    "A": {
+      "item": "alexscaves:cooked_dinosaur_chop"
+    },
+    "B": {
+      "item": "minecraft:bowl"
+    }
+  },
+  "result": {
+    "item": "cavedelight:roasted_dino_chop",
+    "count": 1
+  }
+}

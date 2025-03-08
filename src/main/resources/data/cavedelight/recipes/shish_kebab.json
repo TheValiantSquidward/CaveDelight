@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "cavedelight:cooked_dino_cut"
+    },
+    {
+      "item": "farmersdelight:fried_egg"
+    },
+    {
+      "item": "minecraft:stick"
+    },
+    {
+      "item": "cavedelight:cooked_curious_insect"
+    },
+    {
+      "item": "alexscaves:fiddlehead"
+    }
+  ],
+  "result": {
+    "item": "cavedelight:shish_kebab",
+    "count": 1
+  }
+}

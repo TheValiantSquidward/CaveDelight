@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#B#",
+    "AFA"
+  ],
+  "key": {
+    "#": {
+      "item": "cavedelight:cooked_curious_insect"
+    },
+    "B": {
+      "item": "minecraft:brown_mushroom"
+    },
+    "A": {
+      "item": "alexscaves:flytrap"
+    },
+    "F": {
+      "item": "farmersdelight:tomato_sauce"
+    }
+  },
+  "result": {
+    "item": "cavedelight:flytrap_taco",
+    "count": 1
+  }
+}

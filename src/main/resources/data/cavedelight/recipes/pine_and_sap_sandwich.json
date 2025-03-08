@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "alexscaves:pine_nuts"
+    },
+    {
+      "item": "alexscaves:pewen_sap"
+    },
+    {
+      "item": "alexscaves:pine_nuts"
+    },
+    {
+      "item": "alexscaves:pine_nuts"
+    },
+    {
+      "item": "minecraft:bread"
+    }
+  ],
+  "result": {
+    "item": "cavedelight:pine_and_sap_sandwich",
+    "count": 1
+  }
+}

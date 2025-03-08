@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smoking",
+  "category": "food",
+  "cookingtime": 100,
+  "experience": 0.35,
+  "ingredient": {
+    "item": "cavedelight:raw_dino_cut"
+  },
+  "result": "cavedelight:cooked_dino_cut"
+}

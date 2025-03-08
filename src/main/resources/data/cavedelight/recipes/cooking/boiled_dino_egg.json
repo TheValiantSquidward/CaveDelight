@@ -1,0 +1,14 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 200,
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "tag": "cavedelight:big_dinosaur_egg"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "item": "cavedelight:boiled_dino_egg"
+  }
+}

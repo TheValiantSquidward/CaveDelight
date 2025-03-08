@@ -1,0 +1,11 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "cavedelight:item/honey_glazed_dino_nugget_0"
+  },
+  "overrides": [
+    { "predicate": { "cavedelight:nugget": 0.25 }, "model": "cavedelight:item/honey_glazed_dino_nugget_1" },
+    { "predicate": { "cavedelight:nugget": 0.50 }, "model": "cavedelight:item/honey_glazed_dino_nugget_2" },
+    { "predicate": { "cavedelight:nugget": 0.75 }, "model": "cavedelight:item/honey_glazed_dino_nugget_3" }
+  ]
+}

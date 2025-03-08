@@ -1,0 +1,26 @@
+{
+  "type": "farmersdelight:cooking",
+  "container": {
+    "item": "minecraft:bowl"
+  },
+  "cookingtime": 200,
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "item": "cavedelight:raw_dino_cut"
+    },
+    {
+      "item": "farmersdelight:rice"
+    },
+    {
+      "item": "alexscaves:pewen_sap"
+    },
+    {
+      "item": "alexscaves:pewen_sap"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "item": "cavedelight:dino_cut_rice"
+  }
+}

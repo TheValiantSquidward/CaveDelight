@@ -1,0 +1,21 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "alexscaves:tectonic_shard"
+        },
+        {
+            "item": "farmersdelight:cabbage_leaf"
+        },
+        {
+            "item": "minecraft:bread"
+        },
+        {
+            "item": "farmersdelight:ham"
+        }
+    ],
+    "result": {
+        "item": "cavedelight:lux_and_ham_sandwich",
+        "count": 1
+    }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "alexscaves:cooked_dinosaur_chop"
+    }
+  ],
+  "result": [
+    {
+      "count": 4,
+      "item": "cavedelight:cooked_dino_cut"
+    },
+    {
+      "item": "minecraft:bone"
+    }
+  ],
+  "tool": {
+    "type": "farmersdelight:tool_action",
+    "action": "axe_strip"
+  }
+}

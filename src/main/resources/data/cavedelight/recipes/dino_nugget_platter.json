@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##C",
+    "#CC",
+    " BF"
+  ],
+  "key": {
+    "#": {
+      "item": "alexscaves:dinosaur_nuggets"
+    },
+    "C": {
+      "item": "cavedelight:honey_glazed_dino_nuggets"
+    },
+    "B": {
+      "item": "minecraft:bowl"
+    },
+    "F": {
+      "item": "farmersdelight:tomato_sauce"
+    }
+  },
+  "result": {
+    "item": "cavedelight:dino_nugget_platter",
+    "count": 1
+  }
+}

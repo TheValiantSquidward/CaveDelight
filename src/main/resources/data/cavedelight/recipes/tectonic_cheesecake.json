@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#M#",
+    "BFB"
+  ],
+  "key": {
+    "#": {
+      "item": "alexscaves:tectonic_shard"
+    },
+    "M": {
+      "item": "minecraft:magma_cream"
+    },
+    "B": {
+      "item": "minecraft:milk_bucket"
+    },
+    "F": {
+      "item": "farmersdelight:pie_crust"
+    }
+  },
+  "result": {
+    "item": "cavedelight:tectonic_cheesecake",
+    "count": 1
+  }
+}

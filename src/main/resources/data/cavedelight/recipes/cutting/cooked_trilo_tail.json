@@ -1,0 +1,20 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "alexscaves:cooked_trilocaris_tail"
+    }
+  ],
+  "result": [
+    {
+      "count": 2,
+      "item": "cavedelight:cooked_trilocaris_slice"
+    },
+    {
+      "item": "minecraft:bone_meal"
+    }
+  ],
+  "tool": {
+    "tag": "forge:tools/knives"
+  }
+}

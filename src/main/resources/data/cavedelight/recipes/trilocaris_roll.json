@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "farmersdelight:cooked_rice"
+    },
+    {
+      "item": "cavedelight:raw_trilocaris_slice"
+    },
+    {
+      "item": "cavedelight:raw_trilocaris_slice"
+    }
+  ],
+  "result": {
+    "item": "cavedelight:trilocaris_roll",
+    "count": 1
+  }
+}

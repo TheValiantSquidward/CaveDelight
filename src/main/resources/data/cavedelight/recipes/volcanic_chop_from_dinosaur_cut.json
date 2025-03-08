@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " # ",
+    "ADA",
+    " B "
+  ],
+  "key": {
+    "#": {
+      "item": "farmersdelight:onion"
+    },
+    "A": {
+      "item": "alexscaves:tectonic_shard"
+    },
+    "D": {
+      "item": "cavedelight:cooked_dino_cut"
+    },
+    "B": {
+      "item": "minecraft:bowl"
+    }
+  },
+  "result": {
+    "item": "cavedelight:volcanic_chop",
+    "count": 1
+  }
+}

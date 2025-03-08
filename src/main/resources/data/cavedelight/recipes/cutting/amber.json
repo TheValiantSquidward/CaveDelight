@@ -1,0 +1,19 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "alexscaves:amber"
+    }
+  ],
+  "result": [
+    {
+      "count": 1,
+      "chance": 0.05,
+      "item": "alexscaves:amber_curiosity"
+    }
+  ],
+  "tool": {
+    "type": "farmersdelight:tool_action",
+    "action": "pickaxe_dig"
+  }
+}

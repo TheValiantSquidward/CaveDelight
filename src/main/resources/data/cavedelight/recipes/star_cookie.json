@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "alexscaves:tree_star"
+    },
+    {
+      "item": "alexscaves:pewen_sap"
+    },
+    {
+      "item": "minecraft:wheat"
+    }
+  ],
+  "result": {
+    "item": "cavedelight:star_cookie",
+    "count": 8
+  }
+}

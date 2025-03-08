@@ -1,0 +1,6 @@
+{
+"parent": "minecraft:item/generated",
+"textures": {
+"layer0": "cavedelight:item/lux_and_ham_sandwich"
+}
+}

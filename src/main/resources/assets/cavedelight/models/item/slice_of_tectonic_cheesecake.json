@@ -1,0 +1,6 @@
+{
+"parent": "minecraft:item/generated",
+"textures": {
+"layer0": "cavedelight:item/slice_of_tectonic_cheesecake"
+}
+}

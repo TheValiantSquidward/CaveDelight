@@ -1,0 +1,22 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "alexscaves:amber_curiosity"
+    }
+  ],
+  "result": [
+    {
+      "count": 1,
+      "item": "cavedelight:curious_insect"
+    },
+    {
+      "count": 2,
+      "item": "alexscaves:amber"
+    }
+  ],
+  "tool": {
+    "type": "farmersdelight:tool_action",
+    "action": "pickaxe_dig"
+  }
+}

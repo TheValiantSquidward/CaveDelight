@@ -1,0 +1,43 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"1": "cavedelight:block/tray_bottom",
+		"2": "cavedelight:block/tray_dino_leftovers",
+		"particle": "cavedelight:block/tray_bottom"
+	},
+	"elements": [
+		{
+			"from": [0, 0, 0],
+			"to": [16, 2, 16],
+			"faces": {
+				"north": {"uv": [1, 11, 15, 13], "texture": "#1"},
+				"east": {"uv": [1, 11, 15, 13], "texture": "#1"},
+				"south": {"uv": [1, 11, 15, 13], "texture": "#1"},
+				"west": {"uv": [1, 11, 15, 13], "texture": "#1"},
+				"up": {"uv": [1, 1, 15, 15], "texture": "#2"},
+				"down": {"uv": [1, 1, 15, 15], "texture": "#1"}
+			}
+		}
+	],
+	"groups": [
+		{
+			"name": "roasted",
+			"origin": [8, 8, 8],
+			"color": 0,
+			"children": [
+				{
+					"name": "tray",
+					"origin": [10, 5, 11],
+					"color": 0,
+					"children": [0]
+				},
+				{
+					"name": "meat",
+					"origin": [8, 8, 8],
+					"color": 0,
+					"children": []
+				}
+			]
+		}
+	]
+}
