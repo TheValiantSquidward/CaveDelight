@@ -13,13 +13,9 @@ import net.minecraft.world.entity.monster.AbstractIllager;
 
 public class RoastedGrottoceratopsModel<T extends Entity> extends HierarchicalModel<T> {
 	private final ModelPart grottoceratops;
-	private final ModelPart grotto_right_front_leg;
-	private final ModelPart grotto_left_front_leg;
 
 	public RoastedGrottoceratopsModel(ModelPart root) {
 		this.grottoceratops = root.getChild("grottoceratops");
-		this.grotto_right_front_leg = root.getChild("grotto_right_front_leg");
-		this.grotto_left_front_leg = root.getChild("grotto_left_front_leg");
 	}
 
 	public static LayerDefinition createBodyLayer() {

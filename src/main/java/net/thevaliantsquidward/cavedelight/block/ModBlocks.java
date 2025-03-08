@@ -14,6 +14,7 @@ import net.thevaliantsquidward.cavedelight.CaveDelight;
 import net.thevaliantsquidward.cavedelight.block.custom.BoiledTrilocarisBlock;
 import net.thevaliantsquidward.cavedelight.block.custom.DinoNuggetPlatterBlock;
 import net.thevaliantsquidward.cavedelight.block.custom.RoastedDinoChopBlock;
+import net.thevaliantsquidward.cavedelight.block.custom.TectonicPieBlock;
 import net.thevaliantsquidward.cavedelight.item.ModItems;
 import vectorwing.farmersdelight.common.block.PieBlock;
 
@@ -30,7 +31,7 @@ public class ModBlocks {
 
 
     public static final RegistryObject<Block> TECTONIC_CHEESECAKE = registerBlock("tectonic_cheesecake",
-            () -> new PieBlock(Block.Properties.copy(Blocks.CAKE), ModItems.SLICE_OF_TECTONIC_CHEESECAKE));
+            () -> new TectonicPieBlock(Block.Properties.copy(Blocks.CAKE), ModItems.SLICE_OF_TECTONIC_CHEESECAKE));
 
     public static final RegistryObject<Block> PINENUT_PIE = registerBlock("pinenut_pie",
             () -> new PieBlock(Block.Properties.copy(Blocks.CAKE), ModItems.SLICE_OF_PINENUT_PIE));
