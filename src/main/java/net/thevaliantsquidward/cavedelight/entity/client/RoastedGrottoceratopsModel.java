@@ -10,12 +10,17 @@ import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.*;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.monster.AbstractIllager;
+import net.thevaliantsquidward.cavedelight.entity.custom.RoastedGrottoceratopsEntity;
 
 public class RoastedGrottoceratopsModel<T extends Entity> extends HierarchicalModel<T> {
 	private final ModelPart grottoceratops;
+	private final ModelPart grotto_body;
+	private final ModelPart grotto_left_front_leg;
 
 	public RoastedGrottoceratopsModel(ModelPart root) {
 		this.grottoceratops = root.getChild("grottoceratops");
+		this.grotto_body = grottoceratops.getChild("grotto_body");
+		this.grotto_left_front_leg = grotto_body.getChild("grotto_left_front_leg");
 	}
 
 	public static LayerDefinition createBodyLayer() {
@@ -104,8 +109,14 @@ public class RoastedGrottoceratopsModel<T extends Entity> extends HierarchicalMo
 
 	@Override
 	public void setupAnim(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+		//if (entity instanceof RoastedGrottoceratopsEntity roastedGrottoceratops) {
+			//this.grotto_left_front_leg.visible = roastedGrottoceratops.consumptionStage() > 0;
+		//}
+	}
 
-//		this.grotto_left_front_leg.visible = flag1;
+	@Override
+	public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
+		grottoceratops.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
 	}
 
 	@Override

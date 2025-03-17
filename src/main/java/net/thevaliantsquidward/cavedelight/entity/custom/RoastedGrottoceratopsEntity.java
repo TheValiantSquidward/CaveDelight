@@ -1,6 +1,8 @@
 package net.thevaliantsquidward.cavedelight.entity.custom;
 
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -10,6 +12,9 @@ import net.minecraft.world.entity.vehicle.Boat;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
+import org.jetbrains.annotations.NotNull;
+
+import javax.annotation.Nonnull;
 
 public class RoastedGrottoceratopsEntity extends Entity {
 
@@ -31,7 +36,16 @@ public class RoastedGrottoceratopsEntity extends Entity {
     }
 
     @Override
-    protected void addAdditionalSaveData(CompoundTag pCompound) {
+    protected void addAdditionalSaveData(CompoundTag compoundTag) {
+
+    }
+
+
+    public @NotNull InteractionResult interact(@Nonnull Player player, @Nonnull InteractionHand hand) {
+        ItemStack itemstack = player.getItemInHand(hand);
+        if(hand != InteractionHand.MAIN_HAND) return InteractionResult.FAIL;
+        itemstack.shrink(1);
+        return InteractionResult.SUCCESS;
     }
 
     @Override
