@@ -109,9 +109,9 @@ public class RoastedGrottoceratopsModel<T extends Entity> extends HierarchicalMo
 
 	@Override
 	public void setupAnim(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-		//if (entity instanceof RoastedGrottoceratopsEntity roastedGrottoceratops) {
-			//this.grotto_left_front_leg.visible = roastedGrottoceratops.consumptionStage() > 0;
-		//}
+		if (entity instanceof RoastedGrottoceratopsEntity roastedGrottoceratops) {
+			this.grotto_left_front_leg.visible = roastedGrottoceratops.consumptionStage() > 0;
+		}
 	}
 
 	@Override

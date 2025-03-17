@@ -40,11 +40,20 @@ public class RoastedGrottoceratopsEntity extends Entity {
 
     }
 
+    @Override
+    public boolean isPickable() {
+        return true;
+    }
+
+    public int eatedness = 0;
+
+    public int consumptionStage() {
+        return eatedness;
+    }
 
     public @NotNull InteractionResult interact(@Nonnull Player player, @Nonnull InteractionHand hand) {
         ItemStack itemstack = player.getItemInHand(hand);
-        if(hand != InteractionHand.MAIN_HAND) return InteractionResult.FAIL;
-        itemstack.shrink(1);
+        eatedness++;
         return InteractionResult.SUCCESS;
     }
 
