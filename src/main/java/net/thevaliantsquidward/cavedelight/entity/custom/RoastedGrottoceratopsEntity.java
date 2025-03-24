@@ -67,16 +67,16 @@ public class RoastedGrottoceratopsEntity extends Entity {
     public @NotNull InteractionResult interact(@Nonnull Player player, @Nonnull InteractionHand hand) {
         ItemStack itemstack = player.getItemInHand(hand);
         if(getConsumptionStage() < 11 && itemstack.getItem() == Items.BOWL) {
-            if (getConsumptionStage() == 0 || getConsumptionStage() == 1 || getConsumptionStage() == 2 || getConsumptionStage() == 3) {
+            if (getConsumptionStage() >= 0 && getConsumptionStage() <= 3) {
                 if(!player.addItem(new ItemStack(ModItems.PLATE_OF_GROTTO_LEG.get()))){player.spawnAtLocation(ModItems.PLATE_OF_GROTTO_LEG.get());}
                 this.playSound(SoundEvents.ARMOR_EQUIP_GENERIC, 1.0F, 1.0F);
                 itemstack.shrink(1);
         }
-            if (getConsumptionStage() == 4 || getConsumptionStage() == 5) {
+            if (getConsumptionStage() >= 4 && getConsumptionStage() <= 5) {
                 if(!player.addItem(new ItemStack(ModItems.PLATE_OF_TAIL_CUT.get()))){player.spawnAtLocation(ModItems.PLATE_OF_TAIL_CUT.get());}
                 this.playSound(SoundEvents.ARMOR_EQUIP_GENERIC, 1.0F, 1.0F);
                 itemstack.shrink(1);
-            }             if (getConsumptionStage() == 6 || getConsumptionStage() == 7 || getConsumptionStage() == 8 || getConsumptionStage() == 9 || getConsumptionStage() == 10) {
+            }             if (getConsumptionStage() >= 6 && getConsumptionStage() <= 10) {
                 if(!player.addItem(new ItemStack(ModItems.PLATE_OF_GROTTO_BURNT_ENDS.get()))){player.spawnAtLocation(ModItems.PLATE_OF_GROTTO_BURNT_ENDS.get());}
                 this.playSound(SoundEvents.ARMOR_EQUIP_GENERIC, 1.0F, 1.0F);
                 itemstack.shrink(1);
