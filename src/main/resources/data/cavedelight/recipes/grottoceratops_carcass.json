@@ -1,0 +1,38 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "alexscaves:dinosaur_chop"
+    },
+    {
+      "item": "alexscaves:dinosaur_chop"
+    },
+    {
+      "item": "alexscaves:dinosaur_chop"
+    },
+    {
+      "item": "alexscaves:primordial_helmet"
+    },
+    {
+      "item": "alexscaves:heavy_bone"
+    },
+    {
+      "item": "alexscaves:heavy_bone"
+    },
+    {
+      "item": "alexscaves:tough_hide"
+    }
+  ,
+    {
+      "item": "alexscaves:tough_hide"
+    }
+  ,
+    {
+      "item": "alexscaves:tough_hide"
+    }
+  ],
+  "result": {
+    "item": "cavedelight:grottoceratops_carcass",
+    "count": 1
+  }
+}

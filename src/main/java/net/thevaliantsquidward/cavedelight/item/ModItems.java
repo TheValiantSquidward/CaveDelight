@@ -15,6 +15,7 @@ import net.minecraftforge.registries.RegistryObject;
 import net.thevaliantsquidward.cavedelight.CaveDelight;
 import net.thevaliantsquidward.cavedelight.block.ModBlocks;
 import net.thevaliantsquidward.cavedelight.item.custom.DrinkableBottleItem;
+import net.thevaliantsquidward.cavedelight.item.custom.GrottoFeastItem;
 import net.thevaliantsquidward.cavedelight.item.custom.ShishKebabItem;
 import vectorwing.farmersdelight.common.item.DrinkableItem;
 import vectorwing.farmersdelight.common.registry.ModEffects;
@@ -212,6 +213,9 @@ public class ModItems {
                             .effect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 6000, 0), 1F)
                             .effect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 3600, 0), 1F)
                             .build())));
+
+    public static final RegistryObject<Item> GROTTOCERATOPS_CARCASS = ITEMS.register("grottoceratops_carcass", () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> ROASTED_GROTTOCERATOPS = ITEMS.register("roasted_grottoceratops", () -> new GrottoFeastItem(new Item.Properties().stacksTo(1)));
 
 
     public static void register(IEventBus eventBus) {

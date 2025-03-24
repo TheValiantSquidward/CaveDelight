@@ -54,6 +54,8 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.PINENUT_PIE.get());
                         pOutput.accept(ModBlocks.TECTONIC_CHEESECAKE.get());
 
+                        pOutput.accept(ModItems.GROTTOCERATOPS_CARCASS.get());
+                        pOutput.accept(ModItems.ROASTED_GROTTOCERATOPS.get());
                         //pOutput.accept(ModBlocks.DINO_NUGGET_PLATTER.get());
                     })
                     .build());

@@ -8,6 +8,10 @@
   "block.cavedelight.pinenut_pie" : "Pinenut Pie",
   "block.cavedelight.tectonic_cheesecake" : "Tectonic Cheesecake",
 
+  "item.cavedelight.grottoceratops_carcass" : "Grottoceratops Carcass",
+  "item.cavedelight.roasted_grottoceratops" : "Roasted Grottoceratops",
+
+
   "item.cavedelight.boiled_dino_egg" : "Boiled Dino Egg",
   "item.cavedelight.cooked_curious_insect" : "Cooked Curious Insect",
   "item.cavedelight.cooked_dino_cut" : "Cooked Dino Cut",
