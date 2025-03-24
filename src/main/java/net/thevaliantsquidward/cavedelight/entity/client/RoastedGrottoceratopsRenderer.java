@@ -12,7 +12,20 @@ import net.minecraft.client.renderer.texture.OverlayTexture;
 
 public class RoastedGrottoceratopsRenderer extends EntityRenderer<RoastedGrottoceratopsEntity> {
 
-    private static final ResourceLocation TEXTURE = new ResourceLocation("cavedelight", "textures/entity/roasted_grottoceratops.png");
+    private static final ResourceLocation TEXTURE = new ResourceLocation("cavedelight", "textures/entity/roasted_grotto.png");
+    private static final ResourceLocation TEXTURE1 = new ResourceLocation("cavedelight", "textures/entity/roasted_grotto1.png");
+    private static final ResourceLocation TEXTURE2 = new ResourceLocation("cavedelight", "textures/entity/roasted_grotto2.png");
+    private static final ResourceLocation TEXTURE3 = new ResourceLocation("cavedelight", "textures/entity/roasted_grotto3.png");
+    private static final ResourceLocation TEXTURE4 = new ResourceLocation("cavedelight", "textures/entity/roasted_grotto4.png");
+    private static final ResourceLocation TEXTURE5 = new ResourceLocation("cavedelight", "textures/entity/roasted_grotto5.png");
+    private static final ResourceLocation TEXTURE6 = new ResourceLocation("cavedelight", "textures/entity/roasted_grotto6.png");
+    private static final ResourceLocation TEXTURE7 = new ResourceLocation("cavedelight", "textures/entity/roasted_grotto7.png");
+    private static final ResourceLocation TEXTURE8 = new ResourceLocation("cavedelight", "textures/entity/roasted_grotto8.png");
+    private static final ResourceLocation TEXTURE9 = new ResourceLocation("cavedelight", "textures/entity/roasted_grotto9.png");
+    private static final ResourceLocation TEXTURE10 = new ResourceLocation("cavedelight", "textures/entity/roasted_grotto10.png");
+    private static final ResourceLocation TEXTURE11 = new ResourceLocation("cavedelight", "textures/entity/roasted_grotto11.png");
+    private static final ResourceLocation TEXTURE12 = new ResourceLocation("cavedelight", "textures/entity/roasted_grotto12.png");
+
 
     private final RoastedGrottoceratopsModel model;
 
@@ -35,6 +48,20 @@ public class RoastedGrottoceratopsRenderer extends EntityRenderer<RoastedGrottoc
 
     @Override
     public ResourceLocation getTextureLocation(RoastedGrottoceratopsEntity entity) {
-        return TEXTURE;
+        return switch (entity.getConsumptionStage()) {
+            case 1 -> TEXTURE1;
+            case 2 -> TEXTURE2;
+            case 3 -> TEXTURE3;
+            case 4 -> TEXTURE4;
+            case 5 -> TEXTURE5;
+            case 6 -> TEXTURE6;
+            case 7 -> TEXTURE7;
+            case 8 -> TEXTURE8;
+            case 9 -> TEXTURE9;
+            case 10 -> TEXTURE10;
+            case 11 -> TEXTURE11;
+            case 12 -> TEXTURE12;
+            default -> TEXTURE;
+        };
     }
 }
