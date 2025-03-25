@@ -35,15 +35,22 @@ public class RoastedGrottoceratopsRenderer extends EntityRenderer<RoastedGrottoc
         this.model = new RoastedGrottoceratopsModel(context.bakeLayer(ModModelLayers.ROASTED_GROTTOCERATOPS_LAYER));
     }
 
+   // @Override
+   // public void render(RoastedGrottoceratopsEntity entity, float entityYaw, float partialTicks, PoseStack poseStack, MultiBufferSource buffer, int packedLight) {
+   //     poseStack.pushPose();
+   //     poseStack.translate(0.0D, 1.5D, 0.0D);
+   //     poseStack.scale(1.0F, -1.0F, 1.0F);
+   //     VertexConsumer vertexConsumer = buffer.getBuffer(model.renderType(getTextureLocation(entity)));
+   //     model.renderToBuffer(poseStack, vertexConsumer, packedLight, OverlayTexture.NO_OVERLAY, 1.0F, 1.0F, 1.0F, 1.0F);
+   //     poseStack.popPose();
+   //     super.render(entity, entityYaw, partialTicks, poseStack, buffer, packedLight);
+   // }
+
     @Override
-    public void render(RoastedGrottoceratopsEntity entity, float entityYaw, float partialTicks, PoseStack poseStack, MultiBufferSource buffer, int packedLight) {
-        poseStack.pushPose();
-        poseStack.translate(0.0D, 1.5D, 0.0D);
-        poseStack.scale(1.0F, -1.0F, 1.0F);
-        VertexConsumer vertexConsumer = buffer.getBuffer(model.renderType(getTextureLocation(entity)));
-        model.renderToBuffer(poseStack, vertexConsumer, packedLight, OverlayTexture.NO_OVERLAY, 1.0F, 1.0F, 1.0F, 1.0F);
-        poseStack.popPose();
-        super.render(entity, entityYaw, partialTicks, poseStack, buffer, packedLight);
+    public void render(RoastedGrottoceratopsEntity pEntity, float pEntityYaw, float pPartialTicks, PoseStack pMatrixStack, MultiBufferSource pBuffer, int pPackedLight) {
+        VertexConsumer vertexConsumer = pBuffer.getBuffer(model.renderType(getTextureLocation(pEntity)));
+        model.renderToBuffer(pMatrixStack, vertexConsumer, pPackedLight, OverlayTexture.NO_OVERLAY, 1.0F, 1.0F, 1.0F, 1.0F);
+        super.render(pEntity, pEntityYaw, pPartialTicks, pMatrixStack, pBuffer, pPackedLight);
     }
 
     @Override

@@ -8,15 +8,19 @@ import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.vehicle.Boat;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.level.GameRules;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.Vec3;
 import net.thevaliantsquidward.cavedelight.item.ModItems;
 import org.jetbrains.annotations.NotNull;
@@ -24,7 +28,12 @@ import org.jetbrains.annotations.NotNull;
 import javax.annotation.Nonnull;
 
 public class RoastedGrottoceratopsEntity extends Entity {
+    private static final EntityDataAccessor<Integer> DAMAGE_TAKEN = SynchedEntityData.defineId(RoastedGrottoceratopsEntity.class, EntityDataSerializers.INT);
     private static final EntityDataAccessor<Integer> EATEDNESS = SynchedEntityData.defineId(RoastedGrottoceratopsEntity.class, EntityDataSerializers.INT);
+    private int lastHitTick = 0;
+    private float wiggleAngle = 0;
+    private int wiggleTicks = 0;
+
 
     public RoastedGrottoceratopsEntity(EntityType<?> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
@@ -33,6 +42,7 @@ public class RoastedGrottoceratopsEntity extends Entity {
     @Override
     protected void defineSynchedData() {
         this.entityData.define(EATEDNESS, 0);
+        this.entityData.define(DAMAGE_TAKEN, 0);
     }
 
     @Override
@@ -42,12 +52,12 @@ public class RoastedGrottoceratopsEntity extends Entity {
 
     @Override
     protected void readAdditionalSaveData(CompoundTag pCompound) {
-        pCompound.putInt("Eatedness", this.getConsumptionStage());
+        this.setConsumptionStage(pCompound.getInt("Eatedness"));
     }
 
     @Override
     protected void addAdditionalSaveData(CompoundTag compoundTag) {
-        this.setConsumptionStage(compoundTag.getInt("Eatedness"));
+        compoundTag.putInt("Eatedness", this.getConsumptionStage());
     }
 
     @Override
@@ -62,6 +72,33 @@ public class RoastedGrottoceratopsEntity extends Entity {
     public void setConsumptionStage(int eatedness) {
         this.entityData.set(EATEDNESS, Integer.valueOf(eatedness));
     }
+
+
+    public ItemStack getPickResult() {
+        return new ItemStack(ModItems.ROASTED_GROTTOCERATOPS.get());
+    }
+
+    @Override
+    public boolean hurt(DamageSource pSource, float pAmount) {
+        if (this.isInvulnerableTo(pSource)) {
+            return false;
+        }
+
+        int currentDamage = this.entityData.get(DAMAGE_TAKEN);
+        this.entityData.set(DAMAGE_TAKEN, currentDamage + 1);
+        lastHitTick = tickCount;
+
+
+        this.playSound(SoundEvents.WOOD_HIT, 0.8F, 1.2F);
+
+        if (currentDamage + 1 >= 3) {
+            this.playSound(SoundEvents.WOOD_BREAK, 1.0F, 1.0F);
+            this.discard();
+        }
+
+        return true;
+    }
+
 
 
     public @NotNull InteractionResult interact(@Nonnull Player player, @Nonnull InteractionHand hand) {
@@ -105,6 +142,10 @@ public class RoastedGrottoceratopsEntity extends Entity {
         super.tick();
 
 
+        if (this.tickCount - lastHitTick > 20) {
+            this.entityData.set(DAMAGE_TAKEN, 0);
+        }
+
         if (!this.onGround()) {
             double gravity = 0.04;
             double maxFallSpeed = -0.5;
@@ -119,7 +160,8 @@ public class RoastedGrottoceratopsEntity extends Entity {
 
         if (this.onGround()) {
             Vec3 velocity = this.getDeltaMovement();
-            this.setDeltaMovement(velocity.multiply(0.9, 1, 0.9)); // Reduce X/Z speed slightly
+            this.setDeltaMovement(velocity.multiply(0.9, 1, 0.9));
         }
     }
+
 }
