@@ -31,9 +31,6 @@ public class RoastedGrottoceratopsEntity extends Entity {
     private static final EntityDataAccessor<Integer> DAMAGE_TAKEN = SynchedEntityData.defineId(RoastedGrottoceratopsEntity.class, EntityDataSerializers.INT);
     private static final EntityDataAccessor<Integer> EATEDNESS = SynchedEntityData.defineId(RoastedGrottoceratopsEntity.class, EntityDataSerializers.INT);
     private int lastHitTick = 0;
-    private float wiggleAngle = 0;
-    private int wiggleTicks = 0;
-
 
     public RoastedGrottoceratopsEntity(EntityType<?> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
