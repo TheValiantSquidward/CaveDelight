@@ -16,7 +16,7 @@ public class ModCreativeModeTabs {
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, CaveDelight.MOD_ID);
 
     public static final RegistryObject<CreativeModeTab> UNUSUAL_HYBRID_TAB = CREATIVE_MODE_TABS.register("hybrid_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.BOILED_DINO_EGG.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.ROASTED_GROTTOCERATOPS.get()))
                     .title(Component.translatable("creativetab.cavedelight"))
                     .displayItems((pParameters, pOutput) -> {
 
