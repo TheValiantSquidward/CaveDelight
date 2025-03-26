@@ -17,7 +17,7 @@ public class ModEntities {
     public static final RegistryObject<EntityType<RoastedGrottoceratopsEntity>> ROASTED_GROTTOCERATOPS =
             ENTITY_TYPES.register("roasted_grottoceratops",
             () -> EntityType.Builder.<RoastedGrottoceratopsEntity>of(RoastedGrottoceratopsEntity::new, MobCategory.MISC)
-                    .sized(2.3f, 2.5f)
+                    .sized(2.1f, 2.5f)
                     .build("roasted_grottoceratops"));
 
     public static void register(IEventBus eventBus) {
