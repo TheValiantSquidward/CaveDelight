@@ -65,6 +65,6 @@ public class RoastedGrottoceratopsRenderer extends LivingEntityRenderer<RoastedG
 
     @Override
     protected @Nullable RenderType getRenderType(RoastedGrottoceratops entity, boolean bodyVisible, boolean translucent, boolean glowing) {
-        return RenderType.entityCutoutNoCull(STAGE1);
+        return RenderType.entityCutoutNoCull(new ResourceLocation(CaveDelight.MOD_ID,"textures/entity/roasted_grottoceratops_stage_" + (entity.getConsumptionStage() + 1) + ".png"));
     }
 }

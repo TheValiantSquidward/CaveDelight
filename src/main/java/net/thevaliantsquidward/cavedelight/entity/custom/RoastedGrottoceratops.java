@@ -12,6 +12,7 @@ import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.tags.DamageTypeTags;
+import net.minecraft.util.Mth;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.damagesource.DamageSource;
@@ -145,7 +146,7 @@ public class RoastedGrottoceratops extends LivingEntity {
     }
 
     public void setConsumptionStage(int eatedness) {
-        this.entityData.set(EATEDNESS, eatedness);
+        this.entityData.set(EATEDNESS, Mth.clamp(eatedness, 0, 12));
     }
 
     public ItemStack getPickResult() {
