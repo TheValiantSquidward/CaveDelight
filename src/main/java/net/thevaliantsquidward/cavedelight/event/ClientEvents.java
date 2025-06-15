@@ -12,12 +12,6 @@ import net.thevaliantsquidward.cavedelight.item.ModItems;
 public final class ClientEvents {
     @SubscribeEvent
     public static void clientSetup(FMLClientSetupEvent e) {
-
-        ItemProperties.register(ModItems.HONEY_GLAZED_DINO_NUGGET.get(), new ResourceLocation(CaveDelight.MOD_ID, "nugget"),
-                (stack, level, living, j) -> {
-                    return (stack.getCount() % 4) / 4F;
-                });
+        ItemProperties.register(ModItems.HONEY_GLAZED_DINO_NUGGET.get(), new ResourceLocation(CaveDelight.MOD_ID, "nugget"), (stack, level, living, j) -> (stack.getCount() % 4) / 4F);
     }
-
-
 }
