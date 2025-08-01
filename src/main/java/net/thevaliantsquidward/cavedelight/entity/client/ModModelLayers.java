@@ -5,7 +5,14 @@ import net.minecraft.resources.ResourceLocation;
 import net.thevaliantsquidward.cavedelight.CaveDelight;
 
 public class ModModelLayers {
-    public static final ModelLayerLocation ROASTED_GROTTOCERATOPS_LAYER = new ModelLayerLocation(
-            new ResourceLocation(CaveDelight.MOD_ID, "roasted_grotto_layer"), "main");
 
+    public static final ModelLayerLocation ROASTED_GROTTOCERATOPS_LAYER = main("roasted_grottoceratops");
+
+    private static ModelLayerLocation main(String id) {
+        return register(id, "main");
+    }
+
+    private static ModelLayerLocation register(String id, String name) {
+        return new ModelLayerLocation(new ResourceLocation(CaveDelight.MOD_ID, id), name);
+    }
 }

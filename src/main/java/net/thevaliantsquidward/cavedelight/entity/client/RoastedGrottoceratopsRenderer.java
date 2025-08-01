@@ -1,74 +1,70 @@
 package net.thevaliantsquidward.cavedelight.entity.client;
 
 import com.mojang.blaze3d.vertex.PoseStack;
-import com.mojang.blaze3d.vertex.VertexConsumer;
-import net.minecraft.client.renderer.MultiBufferSource;
+import com.mojang.math.Axis;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
+import net.minecraft.client.renderer.entity.LivingEntityRenderer;
 import net.minecraft.resources.ResourceLocation;
-import net.thevaliantsquidward.cavedelight.entity.custom.RoastedGrottoceratopsEntity;
-import net.minecraft.client.renderer.entity.EntityRenderer;
-import net.minecraft.client.renderer.texture.OverlayTexture;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.thevaliantsquidward.cavedelight.CaveDelight;
+import net.thevaliantsquidward.cavedelight.entity.custom.RoastedGrottoceratops;
+import org.jetbrains.annotations.Nullable;
 
+@OnlyIn(Dist.CLIENT)
+public class RoastedGrottoceratopsRenderer extends LivingEntityRenderer<RoastedGrottoceratops, RoastedGrottoceratopsModel<RoastedGrottoceratops>> {
 
-public class RoastedGrottoceratopsRenderer extends EntityRenderer<RoastedGrottoceratopsEntity> {
-
-    private static final ResourceLocation TEXTURE = new ResourceLocation("cavedelight", "textures/entity/roasted_grotto.png");
-    private static final ResourceLocation TEXTURE1 = new ResourceLocation("cavedelight", "textures/entity/roasted_grotto1.png");
-    private static final ResourceLocation TEXTURE2 = new ResourceLocation("cavedelight", "textures/entity/roasted_grotto2.png");
-    private static final ResourceLocation TEXTURE3 = new ResourceLocation("cavedelight", "textures/entity/roasted_grotto3.png");
-    private static final ResourceLocation TEXTURE4 = new ResourceLocation("cavedelight", "textures/entity/roasted_grotto4.png");
-    private static final ResourceLocation TEXTURE5 = new ResourceLocation("cavedelight", "textures/entity/roasted_grotto5.png");
-    private static final ResourceLocation TEXTURE6 = new ResourceLocation("cavedelight", "textures/entity/roasted_grotto6.png");
-    private static final ResourceLocation TEXTURE7 = new ResourceLocation("cavedelight", "textures/entity/roasted_grotto7.png");
-    private static final ResourceLocation TEXTURE8 = new ResourceLocation("cavedelight", "textures/entity/roasted_grotto8.png");
-    private static final ResourceLocation TEXTURE9 = new ResourceLocation("cavedelight", "textures/entity/roasted_grotto9.png");
-    private static final ResourceLocation TEXTURE10 = new ResourceLocation("cavedelight", "textures/entity/roasted_grotto10.png");
-    private static final ResourceLocation TEXTURE11 = new ResourceLocation("cavedelight", "textures/entity/roasted_grotto11.png");
-    private static final ResourceLocation TEXTURE12 = new ResourceLocation("cavedelight", "textures/entity/roasted_grotto12.png");
-
-
-    private final RoastedGrottoceratopsModel model;
+    private static final ResourceLocation STAGE1 = new ResourceLocation(CaveDelight.MOD_ID, "textures/entity/roasted_grottoceratops_stage_1.png");
+    private static final ResourceLocation STAGE2 = new ResourceLocation(CaveDelight.MOD_ID, "textures/entity/roasted_grottoceratops_stage_2.png");
+    private static final ResourceLocation STAGE3 = new ResourceLocation(CaveDelight.MOD_ID, "textures/entity/roasted_grottoceratops_stage_3.png");
+    private static final ResourceLocation STAGE4 = new ResourceLocation(CaveDelight.MOD_ID, "textures/entity/roasted_grottoceratops_stage_4.png");
+    private static final ResourceLocation STAGE5 = new ResourceLocation(CaveDelight.MOD_ID, "textures/entity/roasted_grottoceratops_stage_5.png");
+    private static final ResourceLocation STAGE6 = new ResourceLocation(CaveDelight.MOD_ID, "textures/entity/roasted_grottoceratops_stage_6.png");
+    private static final ResourceLocation STAGE7 = new ResourceLocation(CaveDelight.MOD_ID, "textures/entity/roasted_grottoceratops_stage_7.png");
+    private static final ResourceLocation STAGE8 = new ResourceLocation(CaveDelight.MOD_ID, "textures/entity/roasted_grottoceratops_stage_8.png");
+    private static final ResourceLocation STAGE9 = new ResourceLocation(CaveDelight.MOD_ID, "textures/entity/roasted_grottoceratops_stage_9.png");
+    private static final ResourceLocation STAGE10 = new ResourceLocation(CaveDelight.MOD_ID, "textures/entity/roasted_grottoceratops_stage_10.png");
+    private static final ResourceLocation STAGE11 = new ResourceLocation(CaveDelight.MOD_ID, "textures/entity/roasted_grottoceratops_stage_11.png");
+    private static final ResourceLocation STAGE12 = new ResourceLocation(CaveDelight.MOD_ID, "textures/entity/roasted_grottoceratops_stage_12.png");
+    private static final ResourceLocation STAGE13 = new ResourceLocation(CaveDelight.MOD_ID, "textures/entity/roasted_grottoceratops_stage_13.png");
 
     public RoastedGrottoceratopsRenderer(EntityRendererProvider.Context context) {
-        super(context);
-
-        this.model = new RoastedGrottoceratopsModel(context.bakeLayer(ModModelLayers.ROASTED_GROTTOCERATOPS_LAYER));
-    }
-
-   // @Override
-   // public void render(RoastedGrottoceratopsEntity entity, float entityYaw, float partialTicks, PoseStack poseStack, MultiBufferSource buffer, int packedLight) {
-   //     poseStack.pushPose();
-   //     poseStack.translate(0.0D, 1.5D, 0.0D);
-   //     poseStack.scale(1.0F, -1.0F, 1.0F);
-   //     VertexConsumer vertexConsumer = buffer.getBuffer(model.renderType(getTextureLocation(entity)));
-   //     model.renderToBuffer(poseStack, vertexConsumer, packedLight, OverlayTexture.NO_OVERLAY, 1.0F, 1.0F, 1.0F, 1.0F);
-   //     poseStack.popPose();
-   //     super.render(entity, entityYaw, partialTicks, poseStack, buffer, packedLight);
-   // }
-
-    @Override
-    public void render(RoastedGrottoceratopsEntity pEntity, float pEntityYaw, float pPartialTicks, PoseStack pMatrixStack, MultiBufferSource pBuffer, int pPackedLight) {
-        VertexConsumer vertexConsumer = pBuffer.getBuffer(model.renderType(getTextureLocation(pEntity)));
-        model.renderToBuffer(pMatrixStack, vertexConsumer, pPackedLight, OverlayTexture.NO_OVERLAY, 1.0F, 1.0F, 1.0F, 1.0F);
-        super.render(pEntity, pEntityYaw, pPartialTicks, pMatrixStack, pBuffer, pPackedLight);
+        super(context, new RoastedGrottoceratopsModel<>(context.bakeLayer(ModModelLayers.ROASTED_GROTTOCERATOPS_LAYER)), 0.0F);
     }
 
     @Override
-    public ResourceLocation getTextureLocation(RoastedGrottoceratopsEntity entity) {
+    protected void setupRotations(RoastedGrottoceratops entity, PoseStack matrixStack, float f, float g, float h) {
+        super.setupRotations(entity, matrixStack, f, g, h);
+        matrixStack.translate(0, 1.5, 0);
+        matrixStack.mulPose(Axis.ZP.rotationDegrees(180.0f));
+    }
+
+    protected boolean shouldShowName(RoastedGrottoceratops entity) {
+        return false;
+    }
+
+    @Override
+    public ResourceLocation getTextureLocation(RoastedGrottoceratops entity) {
         return switch (entity.getConsumptionStage()) {
-            case 1 -> TEXTURE1;
-            case 2 -> TEXTURE2;
-            case 3 -> TEXTURE3;
-            case 4 -> TEXTURE4;
-            case 5 -> TEXTURE5;
-            case 6 -> TEXTURE6;
-            case 7 -> TEXTURE7;
-            case 8 -> TEXTURE8;
-            case 9 -> TEXTURE9;
-            case 10 -> TEXTURE10;
-            case 11 -> TEXTURE11;
-            case 12 -> TEXTURE12;
-            default -> TEXTURE;
+            case 1 -> STAGE2;
+            case 2 -> STAGE3;
+            case 3 -> STAGE4;
+            case 4 -> STAGE5;
+            case 5 -> STAGE6;
+            case 6 -> STAGE7;
+            case 7 -> STAGE8;
+            case 8 -> STAGE9;
+            case 9 -> STAGE10;
+            case 10 -> STAGE11;
+            case 11 -> STAGE12;
+            case 12 -> STAGE13;
+            default -> STAGE1;
         };
+    }
+
+    @Override
+    protected @Nullable RenderType getRenderType(RoastedGrottoceratops entity, boolean bodyVisible, boolean translucent, boolean glowing) {
+        return RenderType.entityCutoutNoCull(new ResourceLocation(CaveDelight.MOD_ID,"textures/entity/roasted_grottoceratops_stage_" + (entity.getConsumptionStage() + 1) + ".png"));
     }
 }
