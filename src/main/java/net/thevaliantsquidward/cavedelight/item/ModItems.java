@@ -4,7 +4,6 @@ import com.github.alexmodguy.alexscaves.server.potion.ACEffectRegistry;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.BowlFoodItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
@@ -13,17 +12,18 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.thevaliantsquidward.cavedelight.CaveDelight;
-import net.thevaliantsquidward.cavedelight.block.ModBlocks;
 import net.thevaliantsquidward.cavedelight.item.custom.DrinkableBottleItem;
 import net.thevaliantsquidward.cavedelight.item.custom.GrottoFeastItem;
 import net.thevaliantsquidward.cavedelight.item.custom.ShishKebabItem;
-import vectorwing.farmersdelight.common.item.DrinkableItem;
 import vectorwing.farmersdelight.common.registry.ModEffects;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, CaveDelight.MOD_ID);
 
+    public static Item.Properties drinkItem() {
+        return (new Item.Properties()).craftRemainder(Items.GLASS_BOTTLE).stacksTo(16);
+    }
 
      public static final RegistryObject<Item> BOILED_DINO_EGG = ITEMS.register("boiled_dino_egg", () ->
              new Item(new Item.Properties().food(new FoodProperties.Builder()
@@ -216,6 +216,53 @@ public class ModItems {
 
     public static final RegistryObject<Item> GROTTOCERATOPS_CARCASS = ITEMS.register("grottoceratops_carcass", () -> new Item(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> ROASTED_GROTTOCERATOPS = ITEMS.register("roasted_grottoceratops", () -> new GrottoFeastItem(new Item.Properties().stacksTo(1)));
+
+    public static final RegistryObject<Item> RADPOP = ITEMS.register("radpop", () ->
+            new DrinkableBottleItem(new Item.Properties()
+                    .food(new FoodProperties.Builder()
+                            .alwaysEat()
+                            .effect(new MobEffectInstance(ACEffectRegistry.IRRADIATED.get(), 400, 0), 1F)
+                            .effect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 400, 0), 1F)
+                            .build())));
+
+    public static final RegistryObject<Item> SPELUNKIE_PUDDING = ITEMS.register("spelunkie_pudding", () ->
+            new Item(new Item.Properties()));
+    public static final RegistryObject<Item> BOTTLE_OF_GREEN_SOYLENT = ITEMS.register("bottle_of_green_soylent", () ->
+            new Item(new Item.Properties()));
+    public static final RegistryObject<Item> NUTRIENT_BAR = ITEMS.register("nutrient_bar", () ->
+            new Item(new Item.Properties()));
+    public static final RegistryObject<Item> SLAM_BURGER = ITEMS.register("slam_burger", () ->
+            new Item(new Item.Properties()));
+    public static final RegistryObject<Item> SLAM_SLICE = ITEMS.register("slam_slice", () ->
+            new Item(new Item.Properties()));
+    public static final RegistryObject<Item> COOKED_SLAM_SLICE = ITEMS.register("cooked_slam_slice", () ->
+            new Item(new Item.Properties()));
+    public static final RegistryObject<Item> MUSUBI = ITEMS.register("musubi", () ->
+            new Item(new Item.Properties()));
+    public static final RegistryObject<Item> SLAM_ON_A_STICK = ITEMS.register("slam_on_a_stick", () ->
+            new Item(new Item.Properties()));
+    public static final RegistryObject<Item> SLAM_BREAKFAST = ITEMS.register("slam_breakfast", () ->
+            new Item(new Item.Properties()));
+    public static final RegistryObject<Item> FRIED_SLAM_RICE = ITEMS.register("fried_slam_rice", () ->
+            new Item(new Item.Properties()));
+    public static final RegistryObject<Item> SLAM_RAMEN = ITEMS.register("slam_ramen", () ->
+            new Item(new Item.Properties()));
+    public static final RegistryObject<Item> RADGILL_SLICE = ITEMS.register("radgill_slice", () ->
+            new Item(new Item.Properties()));
+    public static final RegistryObject<Item> COOKED_RADGILL_SLICE = ITEMS.register("cooked_radgill_slice", () ->
+            new Item(new Item.Properties()));
+    public static final RegistryObject<Item> RADGILL_ROLL = ITEMS.register("radgill_roll", () ->
+            new Item(new Item.Properties()));
+    public static final RegistryObject<Item> GAMMA_SPAGHETTI = ITEMS.register("gamma_spaghetti", () ->
+            new Item(new Item.Properties()));
+    public static final RegistryObject<Item> RADGILL_STEW = ITEMS.register("radgill_stew", () ->
+            new Item(new Item.Properties()));
+    public static final RegistryObject<Item> TOXIC_SOUP = ITEMS.register("toxic_soup", () ->
+            new Item(new Item.Properties()));
+    public static final RegistryObject<Item> SLICE_OF_SPELUNKIE_CAKE = ITEMS.register("slice_of_spelunkie_cake", () ->
+            new Item(new Item.Properties()));
+
+
 
 
     public static void register(IEventBus eventBus) {

@@ -89,6 +89,11 @@ public class RoastedGrottoceratopsEntity extends Entity {
         this.playSound(SoundEvents.WOOD_HIT, 0.8F, 1.2F);
 
         if (currentDamage + 1 >= 3) {
+            if(getConsumptionStage() <= 0) {
+                this.spawnAtLocation(ModItems.ROASTED_GROTTOCERATOPS.get());
+            } else {
+                this.spawnAtLocation(Items.BOWL);
+            }
             this.playSound(SoundEvents.WOOD_BREAK, 1.0F, 1.0F);
             this.discard();
         }

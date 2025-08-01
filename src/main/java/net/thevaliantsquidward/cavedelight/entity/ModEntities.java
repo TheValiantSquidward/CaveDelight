@@ -9,6 +9,7 @@ import net.minecraftforge.registries.RegistryObject;
 import net.thevaliantsquidward.cavedelight.CaveDelight;
 import net.thevaliantsquidward.cavedelight.entity.custom.RoastedGrottoceratopsEntity;
 
+
 public class ModEntities {
     public static final DeferredRegister<EntityType<?>> ENTITY_TYPES =
             DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, CaveDelight.MOD_ID);
@@ -19,6 +20,12 @@ public class ModEntities {
             () -> EntityType.Builder.<RoastedGrottoceratopsEntity>of(RoastedGrottoceratopsEntity::new, MobCategory.MISC)
                     .sized(2.1f, 2.5f)
                     .build("roasted_grottoceratops"));
+
+ //   public static final RegistryObject<EntityType<UmbradoughEntity>> UMBRADOUGH =
+ //           ENTITY_TYPES.register("umbradough",
+ //                   () -> EntityType.Builder.<UmbradoughEntity>of(UmbradoughEntity::new, MobCategory.MISC)
+ //                           .sized(1.0f, 1.0f)
+ //                           .build("umbradough"));
 
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);

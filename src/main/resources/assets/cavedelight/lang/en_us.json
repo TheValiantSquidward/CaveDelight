@@ -40,5 +40,25 @@
   "item.cavedelight.tectonic_pasta" : "Tectonic Pasta",
   "item.cavedelight.trilocaris_noodles" : "Trilocaris Noodle Soup",
   "item.cavedelight.trilocaris_roll" : "Trilocaris Roll",
-  "item.cavedelight.volcanic_chop" : "Volcanic Chop"
+  "item.cavedelight.volcanic_chop" : "Volcanic Chop",
+
+  "item.cavedelight.radpop" : "Radpop",
+  "item.cavedelight.spelunkie_pudding" : "Spelunkie Pudding",
+  "item.cavedelight.bottle_of_green_soylent" : "Bottle of Green Soylent",
+  "item.cavedelight.nutrient_bar" : "Nutrient Bar",
+  "item.cavedelight.slam_burger" : "Slam Burger",
+  "item.cavedelight.slam_slice" : "Slam Slice",
+  "item.cavedelight.cooked_slam_slice" : "Cooked Slam Slice",
+  "item.cavedelight.musubi" : "Musubi",
+  "item.cavedelight.slam_on_a_stick" : "Slam on a Stick",
+  "item.cavedelight.slam_breakfast" : "Slam Breakfast",
+  "item.cavedelight.fried_slam_rice" : "Fried Slam Rice",
+  "item.cavedelight.slam_ramen" : "Slam Ramen",
+  "item.cavedelight.radgill_slice" : "Radgill Slice",
+  "item.cavedelight.cooked_radgill_slice" : "Cooked Radgill Slice",
+  "item.cavedelight.radgill_roll" : "Radgill Roll",
+  "item.cavedelight.gamma_spaghetti" : "Gamma Spaghetti",
+  "item.cavedelight.toxic_soup" : "Toxic Soup",
+  "item.cavedelight.radgill_stew" : "Radgill Stew",
+  "item.cavedelight.slice_of_spelunkie_cake" : "Slice of Spelunkie Cake"
 }
