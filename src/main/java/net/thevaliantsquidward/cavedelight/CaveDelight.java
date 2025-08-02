@@ -4,10 +4,9 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.thevaliantsquidward.cavedelight.block.ModBlocks;
-import net.thevaliantsquidward.cavedelight.entity.ModEntities;
-import net.thevaliantsquidward.cavedelight.item.ModItems;
-import net.thevaliantsquidward.cavedelight.tab.ModCreativeModeTabs;
+import net.thevaliantsquidward.cavedelight.registry.CaveDelightBlocks;
+import net.thevaliantsquidward.cavedelight.registry.CaveDelightEntities;
+import net.thevaliantsquidward.cavedelight.registry.CaveDelightItems;
 
 @Mod(CaveDelight.MOD_ID)
 public class CaveDelight {
@@ -17,11 +16,11 @@ public class CaveDelight {
     public CaveDelight() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        ModItems.register(modEventBus);
+        CaveDelightItems.register(modEventBus);
 
-        ModEntities.register(modEventBus);
-        ModCreativeModeTabs.register(modEventBus);
-        ModBlocks.register(modEventBus);
+        CaveDelightEntities.register(modEventBus);
+        CaveDelightCreativeTab.register(modEventBus);
+        CaveDelightBlocks.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
     }
