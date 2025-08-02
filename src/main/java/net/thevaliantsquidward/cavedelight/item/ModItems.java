@@ -225,44 +225,24 @@ public class ModItems {
                             .effect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 400, 0), 1F)
                             .build())));
 
-    public static final RegistryObject<Item> SPELUNKIE_PUDDING = ITEMS.register("spelunkie_pudding", () ->
-            new Item(new Item.Properties()));
-    public static final RegistryObject<Item> BOTTLE_OF_GREEN_SOYLENT = ITEMS.register("bottle_of_green_soylent", () ->
-            new Item(new Item.Properties()));
-    public static final RegistryObject<Item> NUTRIENT_BAR = ITEMS.register("nutrient_bar", () ->
-            new Item(new Item.Properties()));
-    public static final RegistryObject<Item> SLAM_BURGER = ITEMS.register("slam_burger", () ->
-            new Item(new Item.Properties()));
-    public static final RegistryObject<Item> SLAM_SLICE = ITEMS.register("slam_slice", () ->
-            new Item(new Item.Properties()));
-    public static final RegistryObject<Item> COOKED_SLAM_SLICE = ITEMS.register("cooked_slam_slice", () ->
-            new Item(new Item.Properties()));
-    public static final RegistryObject<Item> MUSUBI = ITEMS.register("musubi", () ->
-            new Item(new Item.Properties()));
-    public static final RegistryObject<Item> SLAM_ON_A_STICK = ITEMS.register("slam_on_a_stick", () ->
-            new Item(new Item.Properties()));
-    public static final RegistryObject<Item> SLAM_BREAKFAST = ITEMS.register("slam_breakfast", () ->
-            new Item(new Item.Properties()));
-    public static final RegistryObject<Item> FRIED_SLAM_RICE = ITEMS.register("fried_slam_rice", () ->
-            new Item(new Item.Properties()));
-    public static final RegistryObject<Item> SLAM_RAMEN = ITEMS.register("slam_ramen", () ->
-            new Item(new Item.Properties()));
-    public static final RegistryObject<Item> RADGILL_SLICE = ITEMS.register("radgill_slice", () ->
-            new Item(new Item.Properties()));
-    public static final RegistryObject<Item> COOKED_RADGILL_SLICE = ITEMS.register("cooked_radgill_slice", () ->
-            new Item(new Item.Properties()));
-    public static final RegistryObject<Item> RADGILL_ROLL = ITEMS.register("radgill_roll", () ->
-            new Item(new Item.Properties()));
-    public static final RegistryObject<Item> GAMMA_SPAGHETTI = ITEMS.register("gamma_spaghetti", () ->
-            new Item(new Item.Properties()));
-    public static final RegistryObject<Item> RADGILL_STEW = ITEMS.register("radgill_stew", () ->
-            new Item(new Item.Properties()));
-    public static final RegistryObject<Item> TOXIC_SOUP = ITEMS.register("toxic_soup", () ->
-            new Item(new Item.Properties()));
-    public static final RegistryObject<Item> SLICE_OF_SPELUNKIE_CAKE = ITEMS.register("slice_of_spelunkie_cake", () ->
-            new Item(new Item.Properties()));
-
-
+    public static final RegistryObject<Item> SPELUNKIE_PUDDING = ITEMS.register("spelunkie_pudding", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> BOTTLE_OF_GREEN_SOYLENT = ITEMS.register("bottle_of_green_soylent", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> NUTRIENT_BAR = ITEMS.register("nutrient_bar", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> SLAM_BURGER = ITEMS.register("slam_burger", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> SLAM_SLICE = ITEMS.register("slam_slice", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> COOKED_SLAM_SLICE = ITEMS.register("cooked_slam_slice", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> MUSUBI = ITEMS.register("musubi", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> SLAM_ON_A_STICK = ITEMS.register("slam_on_a_stick", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> SLAM_BREAKFAST = ITEMS.register("slam_breakfast", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> FRIED_SLAM_RICE = ITEMS.register("fried_slam_rice", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> SLAM_RAMEN = ITEMS.register("slam_ramen", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> RADGILL_SLICE = ITEMS.register("radgill_slice", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> COOKED_RADGILL_SLICE = ITEMS.register("cooked_radgill_slice", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> RADGILL_ROLL = ITEMS.register("radgill_roll", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> GAMMA_SPAGHETTI = ITEMS.register("gamma_spaghetti", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> RADGILL_STEW = ITEMS.register("radgill_stew", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> TOXIC_SOUP = ITEMS.register("toxic_soup", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> SLICE_OF_SPELUNKIE_CAKE = ITEMS.register("slice_of_spelunkie_cake", () -> new Item(new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

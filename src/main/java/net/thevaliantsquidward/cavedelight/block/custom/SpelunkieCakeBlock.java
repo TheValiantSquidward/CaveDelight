@@ -34,6 +34,7 @@ import vectorwing.farmersdelight.common.utility.ItemUtils;
 import java.util.function.Supplier;
 
 public class SpelunkieCakeBlock extends Block {
+
     public static final DirectionProperty FACING;
     public static final IntegerProperty BITES;
     protected static final VoxelShape SHAPE;
@@ -42,11 +43,11 @@ public class SpelunkieCakeBlock extends Block {
     public SpelunkieCakeBlock(BlockBehaviour.Properties properties, Supplier<Item> pieSlice) {
         super(properties);
         this.pieSlice = pieSlice;
-        this.registerDefaultState((BlockState)((BlockState)((BlockState)this.stateDefinition.any()).setValue(FACING, Direction.NORTH)).setValue(BITES, 0));
+        this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(BITES, 0));
     }
 
     public ItemStack getPieSliceItem() {
-        return new ItemStack((ItemLike)this.pieSlice.get());
+        return new ItemStack(this.pieSlice.get());
     }
 
     public int getMaxBites() {
@@ -58,7 +59,7 @@ public class SpelunkieCakeBlock extends Block {
     }
 
     public BlockState getStateForPlacement(BlockPlaceContext context) {
-        return (BlockState)this.defaultBlockState().setValue(FACING, context.getHorizontalDirection());
+        return this.defaultBlockState().setValue(FACING, context.getHorizontalDirection());
     }
 
     public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
@@ -95,29 +96,29 @@ public class SpelunkieCakeBlock extends Block {
                 }
             }
 
-            int bites = (Integer)state.getValue(BITES);
+            int bites = state.getValue(BITES);
             if (bites < this.getMaxBites() - 1) {
                 level.setBlock(pos, (BlockState)state.setValue(BITES, bites + 1), 3);
             } else {
                 level.removeBlock(pos, false);
             }
 
-            level.playSound((Player)null, pos, SoundEvents.GENERIC_EAT, SoundSource.PLAYERS, 0.8F, 0.8F);
+            level.playSound(null, pos, SoundEvents.GENERIC_EAT, SoundSource.PLAYERS, 0.8F, 0.8F);
             return InteractionResult.SUCCESS;
         }
     }
 
     protected InteractionResult cutSlice(Level level, BlockPos pos, BlockState state, Player player) {
-        int bites = (Integer)state.getValue(BITES);
+        int bites = state.getValue(BITES);
         if (bites < this.getMaxBites() - 1) {
-            level.setBlock(pos, (BlockState)state.setValue(BITES, bites + 1), 3);
+            level.setBlock(pos, state.setValue(BITES, bites + 1), 3);
         } else {
             level.removeBlock(pos, false);
         }
 
         Direction direction = player.getDirection().getOpposite();
         ItemUtils.spawnItemEntity(level, this.getPieSliceItem(), (double)pos.getX() + (double)0.5F, (double)pos.getY() + 0.3, (double)pos.getZ() + (double)0.5F, (double)direction.getStepX() * 0.15, 0.05, (double)direction.getStepZ() * 0.15);
-        level.playSound((Player)null, pos, SoundEvents.WOOL_BREAK, SoundSource.PLAYERS, 0.8F, 0.8F);
+        level.playSound(null, pos, SoundEvents.WOOL_BREAK, SoundSource.PLAYERS, 0.8F, 0.8F);
         return InteractionResult.SUCCESS;
     }
 
@@ -130,11 +131,11 @@ public class SpelunkieCakeBlock extends Block {
     }
 
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(new Property[]{FACING, BITES});
+        builder.add(FACING, BITES);
     }
 
     public int getAnalogOutputSignal(BlockState blockState, Level level, BlockPos pos) {
-        return this.getMaxBites() - (Integer)blockState.getValue(BITES);
+        return this.getMaxBites() - blockState.getValue(BITES);
     }
 
     public boolean hasAnalogOutputSignal(BlockState state) {
@@ -148,6 +149,6 @@ public class SpelunkieCakeBlock extends Block {
     static {
         FACING = BlockStateProperties.HORIZONTAL_FACING;
         BITES = IntegerProperty.create("bites", 0, 7);
-        SHAPE = Block.box((double)2.0F, (double)0.0F, (double)2.0F, (double)14.0F, (double)4.0F, (double)14.0F);
+        SHAPE = Block.box(2.0F, 0.0F, 2.0F, 14.0F, 4.0F, 14.0F);
     }
 }
